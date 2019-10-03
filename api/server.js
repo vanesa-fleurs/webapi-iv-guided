@@ -11,6 +11,7 @@ server.use(express.json());
 server.get('/', (req, res) => {
   Shoutouts.find()
   .then(shoutouts => {
+    
     res.status(200).json(shoutouts);
   })
   .catch (error => {
